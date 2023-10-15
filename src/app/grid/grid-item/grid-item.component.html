@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <ng-container *ngIf="gridItem">
+      <div class="col-12 col-lg-6 item-image mb-4 mb-lg-0">
+        <img [src]="gridItem.image" [alt]="gridItem.title">
+      </div>
+      <div class="col-12 col-lg-6 item-metadata mb-4 mb-lg-0">
+        <h1>{{ gridItem.title }}</h1>
+        <p>
+          <b>Weight: </b>{{ gridItem.weight }}<br>
+          <b>Height: </b>{{ gridItem.height }}<br>
+          <b>Color: </b><span [ngStyle]="{'color': gridItem.color}">{{ gridItem.color }}</span><br>
+        </p>
+        <p [innerHTML]="gridItem.description"></p>
+      </div>
+    </ng-container>
+    <div class="col-12 pt-4">
+      <a routerLink=".." mat-raised-button>Back</a>
+    </div>
+  </div>
+</div>

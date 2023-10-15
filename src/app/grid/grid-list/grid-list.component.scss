@@ -1,0 +1,10 @@
+@use '@angular/material' as mat;
+
+.card {
+  @include mat.elevation-transition();
+  cursor: pointer;
+  height: 100%;
+  &:hover {
+    @include mat.elevation(8);
+  }
+}

@@ -1,0 +1,13 @@
+.mat-mdc-table {
+  user-select: none;
+  .mat-mdc-row {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .mat-mdc-table {
+    overflow-x: auto;
+    display: block;
+  }
+}
